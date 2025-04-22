@@ -1,0 +1,100 @@
+/* blinking cursor */
+.blinking-cursor {
+    display: inline-block;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* glow shimmer */
+  @keyframes shineText {
+    0% {
+      background-position: -100%;
+    }
+    50% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
+  
+  /* Heartbeat animation */
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .loading-text {
+    animation: fadeIn 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Glowing Animation */
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px rgba(13, 110, 253, 0.5), 0 0 10px rgba(13, 110, 253, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(13, 110, 253, 0.7), 0 0 30px rgba(13, 110, 253, 0.6);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(13, 110, 253, 0.5), 0 0 10px rgba(13, 110, 253, 0.4);
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0;
+    }
+  }
+  

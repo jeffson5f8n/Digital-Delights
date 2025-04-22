@@ -1,0 +1,184 @@
+.btn.btn-primary{
+    background-color: #646cff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  
+  .btn.btn-primary {
+    background-color: #0a0a0a;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #000;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #1506e0;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border: none;
+    animation: wiggle 0.2s ease-in-out infinite;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+    transition: all 0.2s ease-in-out; 
+  }
+  
+  .btn-submit {
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.8), 0 0 30px rgba(13, 110, 253, 0.6);
+    transform: scale(1.05);
+    animation: glowing 1.5s infinite;
+  }
+  
+  .btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: expand 2s infinite;
+  }
+  
+  .btn-primary {
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.8), 0 0 30px rgba(13, 110, 253, 0.6);
+    transform: scale(1.05);
+    animation: glowing 1.5s infinite;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: expand 2s infinite;
+  }
+  
+  .buy-btn {
+    background-color: #00ccff;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    color: #121212;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+  }
+  
+  .buy-btn:hover {
+    background-color: #0612b8;
+  }
+  
+  .pay-btn {
+    background: linear-gradient(to right, #ffa500, #ff4500);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+    position: relative;
+  }
+  
+  .pay-btn:hover {
+    background: linear-gradient(to right, #ff6a00, #ff0000);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+    transform: scale(2.05);
+  }
+  
+  button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2;  
+    position: relative;
+  }
+  
+  button:hover {
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-blue {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 30px;
+    transition: 0.3s;
+  }
+  
+  .btn-blue:hover {
+    background-color: #2563eb;
+  }
+  
+  .btn-outline {
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .btn-outline:hover {
+    background-color: #3b82f6;
+    color: black;
+  }
+  

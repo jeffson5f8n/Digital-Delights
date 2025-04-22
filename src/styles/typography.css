@@ -1,0 +1,51 @@
+.read-the-docs {
+    color: #888;
+  }
+  
+  h1 {
+    color: #0d6efd;
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-right: 30px;
+  }
+  
+  p {
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  a {
+    color: #0d6efd;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar-logo {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #1e90ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.4s ease, transform 0.3s ease-in-out;
+  }
+  
+  .navbar-logo:hover {
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .navbar-link {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+  

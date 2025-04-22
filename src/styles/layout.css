@@ -1,0 +1,134 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .m-4 {
+    margin: 2rem;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row.justify-content-between .col-md-4 {
+    margin-bottom: 30px;
+  }
+  
+  .row.justify-content-between .col-md-6 {
+    margin-bottom: 30px;
+  }
+  
+  .homepage-container {
+    padding-top: 80px; /* space for navbar */
+  }
+  
+  .simple-homepage {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .simple-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .simple-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .simple-content h1 {
+    font-size: 3rem;
+    color: #3b82f6;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .simple-content p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+  }
+  
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Global navbar styling & layout */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: linear-gradient(45deg, #111, #333, #0a0a0a);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #0077ff; /* Blue border */
+    padding: 20px 0;
+    transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-links,
+  .navbar-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  html, body {
+    height: 100%; /* Ensures the body takes up full height */
+    overflow: auto; /* Allow scrolling */
+  }
+  
+  .space-card {
+    margin-right: 30px;
+  }
+  
+  .card-body {
+    background: #222222;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  ul li span {
+    color: #00bfff;
+  }
+  
+  .text-center.text-blue-400.text-4xl.font-bold.mb-12 {
+    margin-top: 50px;
+  }
+  
