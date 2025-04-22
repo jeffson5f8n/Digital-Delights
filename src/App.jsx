@@ -21,7 +21,6 @@ import './styles/productCard.css';
 import './styles/modal.css';
 import './styles/typewriter.css';
 import './styles/testimonials.css';
-import ScrollToTop from './components/ScrollToTop';
 
 const TypewriterPage = () => {
   const navigate = useNavigate();
@@ -48,7 +47,6 @@ function AppWrapper() {
       <div className="pt-16">
 
       <CartProvider>
-      <ScrollToTop />
 
       <div className="content">
         <Routes>
