@@ -12,15 +12,6 @@ import Cart from './components/Cart';
 import AboutUs from './components/About';
 import { CartProvider } from './context/CartContext';
 import ContactUs from './components/ContactUs';
-import './styles/layout.css';
-import './styles/typography.css';
-import './styles/buttons.css';
-import './styles/animations.css';
-import './styles/form.css';
-import './styles/productCard.css';
-import './styles/modal.css';
-import './styles/typewriter.css';
-import './styles/testimonials.css';
 
 const TypewriterPage = () => {
   const navigate = useNavigate();
@@ -37,32 +28,56 @@ const TypewriterPage = () => {
   );
 };
 
+const StyledWrapper = ({ children }) => (
+  <div style={{ marginTop: '750px' }}>
+    {children}
+  </div>
+);
+
+const PlainWrapper = ({ children }) => (
+  <div style={{ marginTop: '0px' }}>
+    {children}
+  </div>
+);
+
 function AppWrapper() {
   const location = useLocation();
 
+  // Show Navbar only if not on landing page
+  const showNavbar = location.pathname !== "/";
+
   return (
     <>
-      {location.pathname !== "/" && <Navbar />}
-      
-      <div className="pt-16">
-
+      {showNavbar && <Navbar />}
       <CartProvider>
-
-      <div className="content">
-        <Routes>
-          <Route path="/" element={<TypewriterPage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<SignIn />} />
-          <Route path="/productdetails" element={<ProductDetails />} />
-          <Route path="/addproduct" element={<AddProducts />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contactus" element={<ContactUs />} />
-        </Routes>
-      </div>
+        {[
+          "/home",
+          "/productdetails",
+          "/addproduct",
+          "/cart",
+          "/about",
+          "/contactus"
+        ].includes(location.pathname) ? (
+          <StyledWrapper>
+            <Routes>
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/productdetails" element={<ProductDetails />} />
+              <Route path="/addproduct" element={<AddProducts />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contactus" element={<ContactUs />} />
+            </Routes>
+          </StyledWrapper>
+        ) : (
+          <PlainWrapper>
+            <Routes>
+              <Route path="/login" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/" element={<TypewriterPage />} />
+            </Routes>
+          </PlainWrapper>
+        )}
       </CartProvider>
-      </div>
     </>
   );
 }
