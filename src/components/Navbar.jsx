@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ShoppingCart, User } from "lucide-react";
+import { useCart } from "./CartContext";
+import { User } from "lucide-react";
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
-
+  const { cart } = useCart();
+// anza hapa
   useEffect(() => {
     // Fetch the user data from localStorage
     const storedUser = localStorage.getItem("user");
@@ -22,33 +24,40 @@ const Navbar = () => {
   return (
     <nav className="navbar fixed top-0 left-0 w-full z-50">
       <div className="navbar-container">
-        {/* Logo */}
         <Link to="/" className="navbar-logo">
           Digital Delights 
         </Link>
 
-        {/* Center Nav Links */}
         <div className="navbar-links">
           <Link to="/home" className="navbar-link">
             Home
           </Link>
-          <Link to="/product" className="navbar-link">
-            Products
-          </Link>
           <Link to="/about" className="navbar-link">
-            About
+            Bookings
           </Link>
+          {/* <Link to="/about" className="navbar-link">
+            About
+          </Link> */}
           <Link to="/contactus" className="navbar-link">
             Contact Us
           </Link>
         </div>
 
-        {/* Right Side */}
         <div className="navbar-icons">
-          <Link to="/cart" className="navbar-icon">
-            <ShoppingCart size={30} />
-          </Link>
+        <Link to="/cart" className="nav-link position-relative">
+                <img src="images/shopping-cart.png" height="30px" alt="Cart" />
+                {cart.length > 0 && (
+                  <span
+                    className="position-absolute "
+                    style={{ fontSize: "15px" }}
+                  >
+                    {cart.length}
+                  </span>
+                )}
+              </Link>
 
+
+        {/* hapa ni kuonyesha sign in na sign up na logut the time theyre needed */}
           {user ? (
             <>
               <span className="navbar-icon">Hello, {user.username}</span>
